@@ -200,36 +200,6 @@ const Data = () => {
         {/* SECTION 2: Hasil Analisis Real-time (Tetap) */}
         {results && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-in fade-in duration-500">
-            <ChartCard
-              title="Min/Max Comparison"
-              subtitle="Complexity: O(N) - Linear Time"
-            >
-              <div className="flex items-end justify-around h-48 pt-4">
-                {results.perf.minMax.map((item, idx) => (
-                  <Bar
-                    key={idx}
-                    item={item}
-                    maxTime={Math.max(...results.perf.minMax.map((i) => i.time))}
-                  />
-                ))}
-              </div>
-            </ChartCard>
-
-            <ChartCard
-              title="Sorting Comparison"
-              subtitle="Iterative O(N²) vs Recursive O(N log N)"
-            >
-              <div className="flex items-end justify-around h-48 pt-4">
-                {results.perf.sort.map((item, idx) => (
-                  <Bar
-                    key={idx}
-                    item={item}
-                    maxTime={Math.max(...results.perf.sort.map((i) => i.time))}
-                  />
-                ))}
-              </div>
-            </ChartCard>
-
             {/* Panel Summary Big O (Tetap) */}
             <div className="md:col-span-2 bg-slate-900 text-white p-8 rounded-[2rem] shadow-2xl border border-slate-700">
               <div className="flex flex-col gap-10">
@@ -278,6 +248,36 @@ const Data = () => {
                 </div>
               </div>
             </div>
+
+            <ChartCard
+              title="Min/Max Comparison"
+              subtitle="Complexity: O(N) - Linear Time"
+            >
+              <div className="flex items-end justify-around h-48 pt-4">
+                {results.perf.minMax.map((item, idx) => (
+                  <Bar
+                    key={idx}
+                    item={item}
+                    maxTime={Math.max(...results.perf.minMax.map((i) => i.time))}
+                  />
+                ))}
+              </div>
+            </ChartCard>
+
+            <ChartCard
+              title="Sorting Comparison"
+              subtitle="Iterative O(N²) vs Recursive O(N log N)"
+            >
+              <div className="flex items-end justify-around h-48 pt-4">
+                {results.perf.sort.map((item, idx) => (
+                  <Bar
+                    key={idx}
+                    item={item}
+                    maxTime={Math.max(...results.perf.sort.map((i) => i.time))}
+                  />
+                ))}
+              </div>
+            </ChartCard>
           </div>
         )}
 
