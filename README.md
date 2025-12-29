@@ -1,5 +1,11 @@
 # Analisis Kompleksitas Algoritma: Iteratif vs Rekursif
 
+## 👤 Developer
+**Anugrah Panji Pradipa (103012580014)** 
+## Anggota Kelompok
+* **Muhammad Bintang R.F (103012580052)** 
+* **Giyats Almanfalutti (103012580054)** 
+
 Aplikasi berbasis web ini dikembangkan untuk memvisualisasikan dan membandingkan performa (Time Complexity) antara pendekatan **Iteratif** dan **Rekursif** dalam kasus pencarian nilai (Min/Max) dan pengurutan data (Sorting).
 
 Dibuat menggunakan **React** dan **Tailwind CSS**.
